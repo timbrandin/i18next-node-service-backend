@@ -17,7 +17,7 @@ function ajax(url, callback, data) {
   }
 };
 
-function getDefaultsserviceUrl {
+function getDefaults(serviceUrl) {
   if (serviceUrl) {
     return {
       loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
