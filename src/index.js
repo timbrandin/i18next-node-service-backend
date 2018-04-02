@@ -17,15 +17,17 @@ function ajax(url, callback, data) {
   }
 };
 
-function getDefaults() {
-  return {
-    loadPath: 'https://api.locize.io/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    getLanguagesPath: 'https://api.locize.io/languages/{{projectId}}',
-    addPath: 'https://api.locize.io/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    referenceLng: 'en',
-    version: 'latest',
-    reloadInterval: 60 * 60 * 1000
-  };
+function getDefaultsserviceUrl {
+  if (serviceUrl) {
+    return {
+      loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+      getLanguagesPath: serviceUrl + '/languages/{{projectId}}',
+      addPath: serviceUrl + '/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+      referenceLng: 'en',
+      version: 'latest',
+      reloadInterval: 60 * 60 * 1000
+    };
+  }
 }
 
 class Backend {
@@ -37,7 +39,7 @@ class Backend {
 
   init(services, options = {}, allOptions = {}) {
     this.services = services;
-    this.options = {...getDefaults(), ...this.options, ...options};
+    this.options = {...getDefaults(options.service), ...this.options, ...options};
     this.allOptions = allOptions;
 
     this.queuedWrites = { pending: {} };

@@ -1,21 +1,20 @@
 {
-  "name": "i18next-node-locize-backend",
-  "version": "2.1.1",
-  "description": "node.js backend layer for i18next using request module to load resources from locize service",
+  "name": "i18next-node-service-backend",
+  "version": "1.0.0",
+  "description": "node.js backend layer for i18next using request module to load resources from external services.",
   "main": "./index.js",
   "keywords": [
     "i18next",
-    "i18next-backend",
-    "locize"
+    "i18next-backend"
   ],
-  "homepage": "https://github.com/locize/i18next-node-locize-backend",
-  "bugs": "https://github.com/locize/i18next-node-locize-backend/issues",
+  "homepage": "https://github.com/timbrandin/i18next-node-service-backend",
+  "bugs": "https://github.com/timbrandin/i18next-node-service-backend/issues",
   "dependencies": {
     "request": "2.79.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/locize/i18next-node-locize-backend.git"
+    "url": "git://github.com/timbrandin/i18next-node-service-backend.git"
   },
   "devDependencies": {
     "babel-cli": "6.18.0",
@@ -33,6 +32,9 @@
     "preversion": "npm run build && git push",
     "postversion": "git push && git push --tags"
   },
-  "author": "Jan Mühlemann <jan.muehlemann@gmail.com> (https://github.com/jamuhl)",
+  "author": [
+    "Jan Mühlemann <jan.muehlemann@gmail.com> (https://github.com/jamuhl)",
+    "Tim Brandin <tim.brandin@gmail.com> (https://github.com/timbrandin)"
+  ],
   "license": "MIT"
 }
