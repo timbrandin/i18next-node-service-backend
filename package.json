@@ -10,7 +10,7 @@
   "homepage": "https://github.com/timbrandin/i18next-node-service-backend",
   "bugs": "https://github.com/timbrandin/i18next-node-service-backend/issues",
   "dependencies": {
-    "request": "2.79.0"
+    "request": "2.85.0"
   },
   "repository": {
     "type": "git",
