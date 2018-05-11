@@ -1,6 +1,6 @@
 {
   "name": "i18next-node-service-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node.js backend layer for i18next using request module to load resources from external services.",
   "main": "./index.js",
   "keywords": [
